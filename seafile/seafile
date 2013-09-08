@@ -2,11 +2,10 @@
 
 # SEAFILE
 # Maintainer: @hadret
-# App Version: 1.7.0
 
 ### BEGIN INIT INFO
 # Provides:          seafile
-# Required-Start:    $local_fs $remote_fs $network $syslog nginx mysql
+# Required-Start:    $local_fs $remote_fs $network $syslog nginx
 # Required-Stop:     $local_fs $remote_fs $network $syslog
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
@@ -14,9 +13,9 @@
 # Description:       Seafile synchronization and collaboration
 ### END INIT INFO
 
-
-APP_ROOT="/home/seafile/seafile/seafile-server-1.7.0"
-SEAFILE_PID="/home/seafile/data/pids/seaf-server.pid"
+APP_VERSION="1.8.1"
+APP_ROOT="/home/seafile/seafile-server-$APP_VERSION"
+SEAFILE_PID="/home/seafile/seafile-data/pids/seaf-server.pid"
 SEAHUB_PID="$APP_ROOT/runtime/seahub.pid"
 STOP_SEAFILE="$APP_ROOT/seafile.sh stop"
 START_SEAFILE="$APP_ROOT/seafile.sh start"
